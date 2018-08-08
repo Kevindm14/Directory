@@ -1,9 +1,9 @@
 class Company < ApplicationRecord
-   validation :name, presence: true,
-    :address, presence: true,
-    :city, presence: true,
-    :state, presence: true,
-    :commercial_activity, presence: true,
-    :cellphone, presence: true,
-    :phone, presence: true,
+   validates :name, presence: true, uniqueness: true
+   validates :address, presence: true
+   validates :city, presence: true
+   validates :state, presence: true
+   validates :commercial_activity, presence: true
+   validates :cellphone, presence: true
+   validates :phone, presence: true
 end
