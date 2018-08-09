@@ -1,0 +1,27 @@
+<div>
+ <h1>Companies</h1>
+<table class="form-control">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Commercial activity</th>
+    <th>Cellphone</th>
+    <th>Phone</th>
+    <th colspan="4"></th>
+  </tr>
+ 
+  <% @companies.each do |comp| %>
+    <tr>
+      <td><%= comp.name %></td>
+      <td><%= comp.address %></td>
+      <td><%= comp.city %></td>
+      <td><%= comp.state %></td>
+      <td><%= comp.commercial_activity %></td>
+      <td><%= comp.cellphone %></td>
+      <td><%= comp.phone %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
