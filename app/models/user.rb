@@ -11,6 +11,4 @@ class User < ApplicationRecord
   validates  :city, presence: true
   validates  :state, presence: true
   validates  :cellphone, presence: true
-  validates  :phone, presence: true
-  validates  :company, presence: true
 end
