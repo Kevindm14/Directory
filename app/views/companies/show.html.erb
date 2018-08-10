@@ -6,3 +6,4 @@
 <p><%= @company.cellphone %></p>
 <p><%= @company.phone %></p>
 <h3><%= time_ago_in_words(@company.updated_at) %></h3>
+<%= link_to 'Edit company', edit_company_path %> | <%= link_to 'Volver', companies_path %>
