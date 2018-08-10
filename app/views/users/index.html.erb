@@ -25,6 +25,13 @@
       <td><%= user.cellphone %></td>
       <td><%= user.phone %></td>
       <td><%= user.company %></td>
+      <td>
+        <%= link_to 'Show', user %>
+        <%= link_to 'Edit user', edit_user_path(user) %>
+        <%= link_to 'Delete user', user,
+                    method: :delete,
+                    data: { confirm: '¿Are you sure?'} %>
+      </td>
     </tr>
   <% end %>
 </table>
