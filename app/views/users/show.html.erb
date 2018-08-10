@@ -1,10 +1,13 @@
-<h1><%= @user.first_name %></h1>
-<p><%= @user.last_name %></p>
-<p><%= @user.address %></p>
-<p><%= @user.email %></p>
-<p><%= @user.city %></p>
-<p><%= @user.state %></p>
-<p><%= @user.cellphone %></p>
-<p><%= @user.phone %></p>
-<p><%= @user.company %></p>
+<ul class="w3-ul">
+  <li class="w3-hover-black"><h1><%= @user.first_name %></h1></li>
+  <li class="w3-hover-red"><h2><%= @user.company.try(:name)%></h2></li>
+  <li class="w3-hover-blue"><p><%= @user.last_name %></p></li>
+  <li class="w3-hover-green"><p><%= @user.address %></p></li>
+  <li class="w3-hover-red"><p><%= @user.email %></p></li>
+  <li class="w3-hover-blue"><p><%= @user.city %></p></li>
+  <li class="w3-hover-green"><p><%= @user.state %></p></li>
+  <li class="w3-hover-red"><p><%= @user.cellphone %></p></li>
+  <li class="w3-hover-blue"><p><%= @user.phone %></p></li>
+</ul>
 <h3><%= time_ago_in_words(@user.updated_at) %></h3>
+<%= link_to 'Volver', users_path %>

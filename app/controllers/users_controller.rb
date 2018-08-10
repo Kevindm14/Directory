@@ -26,6 +26,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    redirect_to users_path
+  end
+
   private
 
   def set_user
@@ -43,7 +48,7 @@ class UsersController < ApplicationController
       :state,
       :cellphone,
       :phone,
-      :company
+      :company_id
     )
   end
 end
