@@ -1,0 +1,16 @@
+ <div>
+    <%= form_for(@company) do |c| %>
+      <% @company.errors.full_messages.each do |message| %>
+        <p style="padding: 2px; background-color: #25639E; display: table;"><%= message %><p>
+      <% end %>
+        Name :  <%= c.text_field :name %><br><br>
+        Address :   <%= c.text_field :address %><br><br>
+        City :     <%= c.text_field :city %><br><br>
+        State :    <%= c.text_field :state %><br><br>
+        Commercial Activity : <%= c.text_field :commercial_activity %><br><br>
+        Cellphone :   <%= c.text_field :cellphone %><br><br>
+        Phone :   <%= c.text_field :phone %><br><br>
+        <%= c.submit %>
+    <% end %>
+    <%= link_to 'Volver', companies_path %>
+</div>

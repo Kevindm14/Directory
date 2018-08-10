@@ -21,7 +21,13 @@
       <td><%= comp.commercial_activity %></td>
       <td><%= comp.cellphone %></td>
       <td><%= comp.phone %></td>
+      <td>
+        <%= link_to 'Show', comp %>
+        <%= link_to 'Edit company', edit_company_path(comp) %>
+      </td>
+
     </tr>
   <% end %>
+  <%= link_to 'New company', new_company_path %>
 </table>
 </div>
