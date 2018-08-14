@@ -1,5 +1,8 @@
- <div>
+ <div class="w3-card-4 w3-container w3-teal w3-margin-right w3-margin-left">
     <%= form_for(@user) do |u| %>
+        <% @user.errors.full_messages.each do |message| %>
+        <p style="padding: 2px; background-color: #25639E; display: table;"><%= message %><p>
+        <% end %>
         First Name* :  <%= u.text_field :first_name %><br><br>
         Last Name* :   <%= u.text_field :last_name %><br><br>
         Address* :     <%= u.text_field :address %><br><br>
@@ -8,8 +11,11 @@
         City* :        <%= u.text_field :city %><br><br>
         State* :       <%= u.text_field :state %><br><br>
         Cellphone* :   <%= u.text_field :cellphone %><br><br>
-        Phone :       <%= u.text_field :phone %><br><br>
-        Company :     <%= u.text_field :company %><br><br>
+        Phone :        <%= u.text_field :phone %><br><br>
+        Company :      <%= u.select :company_id, Company.all.collect { |comp| [ comp.name, comp.id ] }, {:prompt => "Select company"}, {:include_blank => true}%><br><br>
         <%= u.submit %>
     <% end %>
+    <%= link_to 'Volver', users_path %>
   </div>
+
+  
