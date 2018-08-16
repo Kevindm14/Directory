@@ -21,6 +21,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'omnicontacts'
 
 gem 'omniauth-facebook'
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
