@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails', groups: [:development, :test]
+
+gem 'omnicontacts'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
