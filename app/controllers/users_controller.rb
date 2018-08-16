@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_user, except: [:index, :new, :create]
   
   def index
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = current_user.user.new(user_params)
     if @user.save
       redirect_to @user
     else
