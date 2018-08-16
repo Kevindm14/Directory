@@ -35,8 +35,9 @@
   <% end %>
   <%= link_to 'New User', new_user_path %> | <%= link_to 'Companies', companies_path %>
 </table>
-</div>
 
+</div>
+<li><%= link_to 'Import contacts', "/contacts/gmail" %></li>
     <div>
       <% if current_user %>
         Signed in as <strong><%= current_user.name %></strong>!
