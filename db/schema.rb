@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_15_150353) do
+ActiveRecord::Schema.define(version: 2018_08_17_195143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,13 +49,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_150353) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.bigint "company_id"
-    t.string "provider"
-    t.string "uid"
-    t.string "add_oauth_token_to_user"
-    t.string "oauth_token"
-    t.string "name"
-    t.datetime "oauth_expires_at"
     t.string "remember_token"
+    t.string "provider"
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
